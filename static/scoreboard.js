@@ -6,10 +6,11 @@ function display_scoreboard(scoreboard) {
 }
 
 function renderScoreboard() {
-  // sort scoreboardState in descending order
-  scoreboardState.sort(function (a, b) {
-    return b.score - a.score;
-  });
+  // moving this to a server-side sort for consistency
+  // // sort scoreboardState in descending order
+  // scoreboardState.sort(function (a, b) {
+  //   return b.score - a.score;
+  // });
   $("#teams").empty();
   $.each(scoreboard, function (index, team) {
     addTeamView(team.id, team.name, team.score);
